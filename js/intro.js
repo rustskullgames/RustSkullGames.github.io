@@ -2,17 +2,19 @@ window.addEventListener("load", () => {
     const intro = document.getElementById("intro");
     const site = document.getElementById("site");
 
-    // fade-in
-    intro.classList.add("show");
+    /* 1️⃣ Yumuşak fade-in */
+    setTimeout(() => {
+        intro.classList.add("show");
+    }, 100);
 
-    // fade-out
+    /* 2️⃣ Ekranda biraz daha kalsın */
     setTimeout(() => {
         intro.classList.add("hidden");
         site.classList.add("visible");
-    }, 900);
+    }, 1600); // ← önce 900’dü, şimdi daha sinematik
 
-    // tamamen kaldır
+    /* 3️⃣ Tamamen DOM’dan kaldır */
     setTimeout(() => {
         intro.style.display = "none";
-    }, 1300);
+    }, 2100);
 });
