@@ -96,3 +96,8 @@ body {
     color: #ff2a2a;
 }
 
+.nav-accent {
+    width: 100%;
+    height: 90px;          /* NAVBAR BOYUTUNDA */
+    background: #ff7a00;   /* TURUNCU ŞERİT */
+}
