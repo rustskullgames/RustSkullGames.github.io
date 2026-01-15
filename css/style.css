@@ -128,9 +128,3 @@ body {
     margin-top: 140px;
     min-height: 200vh;
 }
-
-/* CONTACT PAGE BACKGROUND */
-.contact-page {
-  background: url("/assets/background.png") no-repeat center center fixed;
-  background-size: cover;
-}
