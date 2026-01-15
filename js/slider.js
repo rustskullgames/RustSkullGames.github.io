@@ -1,6 +1,6 @@
 setTimeout(() => {
-    document.getElementById("intro").style.display = "none";
+    document.getElementById("intro").remove();
     document.getElementById("site").style.display = "block";
     document.body.style.overflow = "auto";
-}, 4000);
+}, 3000);
 
