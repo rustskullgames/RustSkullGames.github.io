@@ -13,3 +13,6 @@ window.addEventListener("load", () => {
         intro.style.display = "none";
     }, 1300);
 });
+
+<script src="js/intro.js"></script>
+<script src="js/navbar.js"></script>
