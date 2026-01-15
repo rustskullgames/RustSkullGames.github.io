@@ -1,45 +1,99 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact – Rust Skull Games</title>
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <title>Contact - Rust Skull Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="intro">
-    <img src="/assets/logo.png">
-</div>
-
-<div id="site">
-
-<header class="navbar-wrapper">
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="/">
-                <img src="/assets/logobanner.png">
-            </a>
-        </div>
-
-        <div class="nav-right">
-            <a class="nav-link" href="/games">GAMES</a>
-            <a class="nav-link" href="/news">NEWS</a>
-            <a class="nav-link" href="/social-media">SOCIAL MEDIA</a>
-            <a class="nav-link" href="/contact">CONTACT</a>
-        </div>
-    </nav>
-    <div class="nav-accent"></div>
+<!-- NAVBAR (senin mevcut navbarınla uyumlu çalışır) -->
+<header class="navbar">
+  <a href="/" class="logo">Rust Skull Games</a>
+  <nav>
+    <a href="/games">Games</a>
+    <a href="/news">News</a>
+    <a href="/social-media">Social Media</a>
+    <a href="/contact" class="active">Contact</a>
+  </nav>
 </header>
 
-<main class="content"></main>
+<div class="nav-strip"></div>
 
+<!-- BAŞLIK -->
+<h1 class="contact-title">CONTACT US</h1>
+
+<!-- GMAIL BOX -->
+<div class="gmail-box">
+  rustskullgames@gmail.com
 </div>
 
-<script src="/js/intro.js"></script>
-<script src="/js/navbar.js"></script>
-<script src="/js/scroll-navbar.js"></script>
+<!-- AÇIKLAMA -->
+<p class="contact-info">
+  If you have questions, ideas, or business inquiries, feel free to reach out to us.
+</p>
+
+<!-- FORM -->
+<form 
+  class="contact-form"
+  action="https://formspree.io/f/XXXXYYYY" 
+  method="POST"
+  onsubmit="return validateForm(event)"
+>
+  <input type="text" name="name" placeholder="Your Name">
+  <input type="email" name="email" placeholder="Your Email">
+  <input type="text" name="subject" placeholder="Subject">
+  <textarea name="message" placeholder="Your Message"></textarea>
+
+  <button type="submit">SEND</button>
+</form>
+
+<p id="form-status"></p>
+
+<!-- FOOTER -->
+<footer class="support">
+  <h2>Support Us On:</h2>
+  <div class="social-links">
+    <a href="https://www.instagram.com/rustskull_games/" target="_blank">
+      <img src="assets/instagram.png">
+    </a>
+    <a href="https://www.youtube.com/channel/UC1-SHB4W49ID3ZckdYIBHHw" target="_blank">
+      <img src="assets/youtube.png">
+    </a>
+    <a href="https://rust-skull-games.itch.io/" target="_blank">
+      <img src="assets/itchio.png">
+    </a>
+    <a href="https://x.com/RustSkullGames" target="_blank">
+      <img src="assets/twitter.png">
+    </a>
+    <a href="https://www.tiktok.com/@rustskullgames" target="_blank">
+      <img src="assets/tiktok.png">
+    </a>
+  </div>
+</footer>
+
+<script>
+function validateForm(e) {
+  const name = document.querySelector('[name="name"]').value.trim();
+  const email = document.querySelector('[name="email"]').value.trim();
+  const message = document.querySelector('[name="message"]').value.trim();
+  const status = document.getElementById("form-status");
+
+  if (!name || !email || !message) {
+    status.textContent = "Please fill all fields.";
+    return false;
+  }
+
+  if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
+    status.textContent = "Invalid email address.";
+    return false;
+  }
+
+  status.textContent = "Sending...";
+  return true;
+}
+</script>
 
 </body>
 </html>
