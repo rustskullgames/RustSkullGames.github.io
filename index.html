@@ -2,44 +2,49 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>RustSkull Games</title>
-
-    <link rel="icon" href="assets/favicon.png">
+    <title>Rust Skull Games</title>
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- INTRO -->
-    <div id="intro">
-        <img src="assets/logo.png" alt="RustSkull Logo">
-    </div>
+<!-- INTRO -->
+<div id="intro">
+    <img src="logo.png" alt="Rust Skull Games">
+</div>
 
-    <!-- SITE -->
-    <div id="site">
+<!-- SITE -->
+<div id="site">
 
-        <!-- NAVBAR -->
-        <header class="navbar">
+    <!-- NAVBAR -->
+    <header class="navbar-wrapper">
+        <nav class="navbar">
             <div class="nav-left">
-                <img src="assets/logobanner.png" alt="RustSkull Games">
+                <a href="index.html">
+                    <img src="logobanner.png" alt="RustSkull Games">
+                </a>
             </div>
 
-            <nav class="nav-right">
-                <a href="/games" class="nav-link">GAMES</a>
-                <a href="/socialmedia" class="nav-link">SOCIAL MEDIA</a>
-                <a href="/contact" class="nav-link">CONTACT</a>
-                <a href="/news" class="nav-link">NEWS</a>
-            </nav>
-        </header>
+            <div class="nav-right">
+                <a class="nav-link active" href="index.html">GAMES</a>
+                <a class="nav-link" href="news.html">NEWS</a>
+                <a class="nav-link" href="socialmedia.html">SOCIAL MEDIA</a>
+                <a class="nav-link" href="contact.html">CONTACT</a>
+            </div>
+        </nav>
 
         <!-- İNCE TURUNCU ŞERİT -->
         <div class="nav-accent"></div>
+    </header>
 
-        <!-- TEST İÇERİK (SONRA SİLERSİN) -->
-        <main style="height:1500px; background:#000;"></main>
+    <!-- SAYFA ALANI -->
+    <main class="content">
+        <!-- şimdilik boş – sonra dolduracağız -->
+    </main>
 
-    </div>
+</div>
 
-    <script src="js/intro.js"></script>
-    <script src="js/navbar.js"></script>
+<script src="js/intro.js"></script>
 </body>
 </html>
