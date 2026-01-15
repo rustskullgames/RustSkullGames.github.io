@@ -21,10 +21,13 @@ body {
 }
 
 #intro img {
-    width: 190px;              /* DAHA BÜYÜK LOGO */
+    width: 32vw;          /* EKRANA GÖRE BÜYÜR */
+    max-width: 360px;     /* TAŞMASIN */
+    min-width: 220px;     /* KÜÇÜK EKRANDA DA OK */
     image-rendering: pixelated;
     animation: logoFade 2.2s forwards;
 }
+
 
 /* SITE */
 #site {
