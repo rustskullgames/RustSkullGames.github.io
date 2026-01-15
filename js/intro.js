@@ -1,7 +1,15 @@
-setTimeout(() => {
+window.addEventListener("load", () => {
     const intro = document.getElementById("intro");
-    if (intro) intro.remove();
+    const site = document.getElementById("site");
 
-    document.getElementById("site").style.display = "block";
-    document.body.style.overflow = "auto";
-}, 1400);
+    // intro gösterim süresi
+    setTimeout(() => {
+        intro.classList.add("hidden");
+        site.classList.add("visible");
+    }, 900); // hızlı intro
+
+    // intro tamamen silinsin
+    setTimeout(() => {
+        intro.style.display = "none";
+    }, 1300);
+});
