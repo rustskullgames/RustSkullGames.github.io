@@ -21,12 +21,29 @@ body {
 }
 
 #intro img {
-    width: 38vw;          /* EKRANA GÖRE BÜYÜR */
-    max-width: 360px;     /* TAŞMASIN */
-    min-width: 220px;     /* KÜÇÜK EKRANDA DA OK */
+    width: 32vw;
+    max-width: 360px;
+    min-width: 220px;
     image-rendering: pixelated;
     animation: logoFade 2.2s forwards;
 }
+
+/* SADE FADE */
+@keyframes logoFade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 
 /* SITE */
